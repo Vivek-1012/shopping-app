@@ -2,6 +2,8 @@ body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ text-transform: capitalize;
+ 
 }
 
 .navitem{
@@ -40,6 +42,8 @@ body{
   display: flex;
 }
 
+
+
 .filterDisplay{
   position: relative;
   margin: 0.5rem 1rem 0.5rem 1rem  ; 
@@ -61,19 +65,51 @@ body{
  width: 90%;
  
 }
-
-
-.itemDisplayCard{
-  border: 1px solid;
-  width: 35vh;
-  height: 45vh;
-  padding: 0.5rem;
-  margin: 0.5rem;
+.cartButton{
+  width: 100%;
+  padding: 1rem;
+  font-size: 20px;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(43, 42, 42);
+  color: white;
+}
+.cartButton{
+  text-decoration: none;
+}
+.accountDetails{
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 0.3rem;
 }
 
-.displayCardTitle , .displayCardAuthor, .displayCardPrice, .displayCardCategory, .displayCardRating {
+.itemDisplayCard{
+  border: 1px solid black;
+  width: 28vh;
+  height: 50vh;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color:whitesmoke;
+  color: black;
+ 
+}
+
+.displayCardTitle , .displayCardAuthor, .displayCardPrice, .displayCardCategory, .displayCardRating,.displayCardActualPrice,.displayCardDiscount {
   margin: 0;
   padding: 0;
+}
+
+.displayCardActualPrice,.displayCardDiscount,.displayCardPrice{
+  margin-right: 0.5rem;
+}
+
+.displayCardAuthor{
+  display: flex;
+  color:black;
+  font-size: 13px;
+  align-items: flex-start;
 }
 
 .displayCardTitle{
@@ -107,6 +143,11 @@ body{
  
 }
 
+.emptyCartText{
+  font-size: 2.5rem;
+  text-align: center;
+  /* margin-left: 38%; */
+}
 .cartPageLayoutCardLayout{
   width: 50%;
   
@@ -120,8 +161,27 @@ body{
   padding: 1.5rem;
 }
 
+.PriceDetails{
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.cartBillitemDisplay{
+  list-style: none;
+  display: flex-column;
+}
+
 .billLayoutCoupon,.billLayoutPrice,.billLayouttotalBill,.billLayoutCoupon,.billLayoutDelivery{
   display: flex;
   justify-content: space-between;
-
+ text-transform: capitalize;
+}
+.billLayouttotalBill{
+  border-top: 1px solid black;
+  padding-top: 0.5rem;
+  
 }

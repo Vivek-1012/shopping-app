@@ -9,9 +9,11 @@ const totalAmount = selectCartItem.reduce((acc,curr)=>acc+curr.price,0)
     <>
     <Link to="/Store">Back to store</Link>
     <h2>Cart Page</h2>
+    
+    {selectCartItem.length === 0 ?<div style={{fontSize:30,textAlign:"center"}} >Your Cart is empty!! 😕</div> :
     <div className='cartPageLayout'>
     <div className='cartPageLayoutCardLayout'>
-    <ol className='itemDisplay'>{selectCartItem?.map(({id,title,_id,author,image,price,categoryName,rating,cart,wishList})=>
+    <ol className='cartBillitemDisplay'>{selectCartItem?.map(({id,title,_id,author,image,price,categoryName,rating,cart,wishList})=>
     <li className='itemDisplayCard' key={id}>
       
       <div><img src={image} alt={title} width={150} height={200} /></div>
@@ -30,6 +32,7 @@ const totalAmount = selectCartItem.reduce((acc,curr)=>acc+curr.price,0)
       </li>)}
       
     </ol>
+    
     </div>
     <div className='cartPageLayoutBillLayout'>
       <div className='billLayout' >
@@ -37,7 +40,7 @@ const totalAmount = selectCartItem.reduce((acc,curr)=>acc+curr.price,0)
       <p>Have A Coupon ?</p>
          <button>Apply</button>
          </div>         
-      <p>Price Details</p>
+      <p className='PriceDetails'>Price Details</p>
       <div className='billLayoutPrice'>
       <p>Price({selectCartItem.length}items)</p>   <p>₹{totalAmount}</p>
       </div>
@@ -52,7 +55,7 @@ const totalAmount = selectCartItem.reduce((acc,curr)=>acc+curr.price,0)
     </div>
     </div>
     </div>
-    </div>
+    </div>}
     </>
   )
 }

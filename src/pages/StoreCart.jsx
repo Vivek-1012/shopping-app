@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 const StorePage = () => {
   const {listProduct,wishlistHandler,cartHandler} = useProductContext();
 
-  const [input, setInput]= useState("");
+  // const [input, setInput]= useState("");
   const [selectPriceRange,setSelectPriceRange] = useState(100);
   const [selectCategories,setSelectCategories]=useState("");
   const [selectRating, setSelectRating] = useState("");
@@ -98,19 +98,24 @@ return (
     <h2>Showing All Products</h2>
     {setStore?.length} items
     <div >
-    <ol className='itemDisplay'>{setStore?.map(({id,title,_id,author,image,price,categoryName,rating,cart,wishList})=>
+    <ol className='itemDisplay'>{setStore?.map(({id,title,_id,actualPrice,author,image,price,discount,categoryName,rating,cart,wishList})=>
     <li className='itemDisplayCard' key={id}>
       
       <div><img src={image} alt={title} width={150} height={200} /></div>
       <div className='titleAndRating'>
-      <p className='displayCardTitle' ><Link to={`/ProductDetails/${_id}`}>{title}</Link></p>
+      <p className='displayCardTitle' ><Link style={{textDecoration:"none"}}  to={`/ProductDetails/${_id}`}>{title}</Link></p>
       <p className='displayCardRating'> {rating}★</p>
       </div>
-      <p className='displayCardAuthor' >Author : {author}</p>
-      <p className='displayCardPrice'>Price : ₹{price}</p>
-      <p className='displayCardCategory' >Category : {categoryName}</p>
+      <p className='displayCardAuthor' >{author}</p>
+      <div className='accountDetails' >      
+      <p className='displayCardPrice'> ₹{price} </p>
+      <p className='displayCardActualPrice'> ₹{actualPrice} </p>
+      <p className='displayCardDiscount'> {discount} </p>
+      </div>
       
-      <div style={{border:"1px solid black"}}>{cart?<Link to="/Cart" style={{cursor:"pointer", textDecoration:"none",fontWeight:"bold"}} >Go to Cart</Link>: <span onClick={()=>cartHandler(_id)} style={{cursor:"pointer"}} > Add to cart </span>}</div>
+      
+
+      <div>{cart?<button className='cartButton'><Link to="/Cart" style={{cursor:"pointer", textDecoration:"none",fontWeight:"bold"}} >Go to Cart</Link></button>:<button className='cartButton'> <span onClick={()=>cartHandler(_id)} style={{cursor:"pointer"}} > Add to cart </span></button>}</div>
       <button onClick={()=>wishlistHandler(_id)}>{wishList?"Remove from wishlist":"Add to WishList"}</button>          
     </li>)}</ol></div>
     </div>
