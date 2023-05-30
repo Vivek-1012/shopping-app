@@ -16,7 +16,7 @@ const SingleProductPage = () => {
     <div className='singlePageLayout' >
       <div className='singlePageLayoutCard'>
       <div className='singlePageLayoutImage' >
-      <img src={ProductDetails.image}   height={300} width={200} /> </div>
+      <img src={ProductDetails.image} alt={ProductDetails.title}  height={300} width={200} /> </div>
     <div className='singlePageLayoutText'>    
     <p style={{margin:"0",padding:"0.5rem",fontSize:"25px",fontWeight:"bold",color:"gold"}}>{ProductDetails.title}</p>
     <p style={{margin:'0',padding:"5px",fontSize:"23px"}}> {ProductDetails.rating}★</p>
