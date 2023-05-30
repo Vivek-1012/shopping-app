@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const WishListPage = () => {
   const {selectWishListItem,wishlistHandler,cartHandler} = useProductContext()
- 
+ console.log(selectWishListItem)
   return (
     <>
     <Link to="/Store"> Back to store </Link>

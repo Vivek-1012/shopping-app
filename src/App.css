@@ -1,4 +1,8 @@
 body{
+  background-color: #171717;
+  /* heading--color: #DA0037; */
+  /* background-color: white; */
+  color:white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -65,6 +69,9 @@ body{
  width: 90%;
  
 }
+.cartButtonDiv{
+  justify-content: flex-end;
+}
 .cartButton{
   width: 100%;
   padding: 1rem;
@@ -73,9 +80,16 @@ body{
   border-radius: 0.5rem;
   background-color: rgb(43, 42, 42);
   color: white;
+position: relative;
+bottom: 1.7rem;
 }
 .cartButton{
   text-decoration: none;
+  background-color: black;
+}
+
+.cartButton:hover{
+  background-color: rgba(0, 0, 0, 0.342);
 }
 .accountDetails{
   display: flex;
@@ -86,28 +100,53 @@ body{
 
 .itemDisplayCard{
   border: 1px solid black;
-  width: 28vh;
+  width: 30vh;
   height: 50vh;
-  padding: 0.5rem;
+  padding: 1.3rem;
   margin: 1rem;
   border-radius: 1rem;
-  background-color:whitesmoke;
-  color: black;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;;
+  color: white;
  
 }
 
-.displayCardTitle , .displayCardAuthor, .displayCardPrice, .displayCardCategory, .displayCardRating,.displayCardActualPrice,.displayCardDiscount {
+.displayCardTitle , .displayCardAuthor, .displayCardPrice, .displayCardCategory, .displayCardRating,.displayCardActualPrice,.displayCardDiscount,.displayCardCrossPrice {
   margin: 0;
   padding: 0;
 }
 
-.displayCardActualPrice,.displayCardDiscount,.displayCardPrice{
+
+.displayCardActualPrice,.displayCardDiscount,.displayCardCrossPrice,.displayCardPrice{
   margin-right: 0.5rem;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 0;
+}
+.displayCardPrice{
+  font-size: 17px;
+  position: relative;
+  bottom: 2px;
+
+}
+.displayCardActualPrice{
+  position: relative;
+  font-size: 13px;
+}
+.displayCardCrossPrice{
+  transform: rotate(75deg);
+  font-size: 2.2rem;
+  bottom: 0.9rem;
+  right: 1.4rem;
+  margin: 0;
+  padding: 0;
+  position:relative ;
+  font-weight: lighter;
 }
 
 .displayCardAuthor{
   display: flex;
-  color:black;
+  color:darkgray;
   font-size: 13px;
   align-items: flex-start;
 }
@@ -127,9 +166,9 @@ body{
   border: 1px solid black;
   width: 2.4rem;
   padding: 0.1mm;
-  
-  height: 22px;
-  border-radius: 0.3rem;
+ font-size: 15px;
+  height: 20px;
+  border-radius: 0.8rem;
   color: white;
 }
 
@@ -138,21 +177,18 @@ body{
 
 /* Cart page Layout */
 
-.cartPageLayout{
-  display: flex;
- 
+.imageCartDisplay{
+padding: 1rem;
 }
 
-.emptyCartText{
-  font-size: 2.5rem;
-  text-align: center;
-  /* margin-left: 38%; */
-}
-.cartPageLayoutCardLayout{
-  width: 50%;
-  
-  text-align:center;
-  
+.CartitemDisplayCard{
+width: 60vh;
+height: 40vh;
+padding: 1.3rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;;
+  color: white;
 }
 
 .billLayout{
@@ -185,3 +221,28 @@ body{
   padding-top: 0.5rem;
   
 }
+
+/* single page Css */
+
+.singlePageLayout{
+  margin: 0;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  border-radius: 1rem;
+  ;
+  
+  position: absolute;
+  top: 50%;
+  width: 70vh;
+  height: 70vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.singlePageLayoutCard{
+  display: flex;
+}
+.singlePageLayoutImage{
+  padding: 1.5rem;
+}
+

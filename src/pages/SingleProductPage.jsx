@@ -11,11 +11,38 @@ const SingleProductPage = () => {
   
   return (
     <>
-    <Link to="/Store">Back</Link>
-    <h2>Product Details</h2>
-    <h1>Title: {ProductDetails.title}</h1>
-    <h2>Author: {ProductDetails.author} </h2>  
-    
+
+<Link to="/Store">Back</Link>
+    <div className='singlePageLayout' >
+      <div className='singlePageLayoutCard'>
+      <div className='singlePageLayoutImage' >
+      <img src={ProductDetails.image}   height={300} width={200} /> </div>
+    <div className='singlePageLayoutText'>    
+    <p style={{margin:"0",padding:"0.5rem",fontSize:"25px",fontWeight:"bold",color:"gold"}}>{ProductDetails.title}</p>
+    <p style={{margin:'0',padding:"5px",fontSize:"23px"}}> {ProductDetails.rating}★</p>
+    <div className='accountDetails' >      
+      <p className='displayCardPrice'> ₹{ProductDetails.price} </p>
+      <p className='displayCardActualPrice'style= {{color:'grey'}}> ₹{ProductDetails.actualPrice} </p>
+      <p className='displayCardCrossPrice'> | </p>
+      <p className='displayCardDiscount' style= {{color:'lightblue'}} > ({ProductDetails.discount} OFF) </p>
+      </div>
+      <p style={{borderBottom:"1px solid grey",paddingBottom:"1rem",margin:"0"}}> ⚡Hurry, Only Few Left!! </p>
+      <div>
+        <p>🏷️ Fastest Delivery</p>
+        <p>🏷️ Inclusive of All Taxes</p>
+        <p>🏷️ Cash On Delivery Available</p>
+      </div>
+      <div>    
+    <p>Author : {ProductDetails.author} </p>
+    <p>category : {ProductDetails.categoryName} </p>  
+    <p>Binding : Hardcover </p>  
+    <p>Language : English </p>  
+    </div>
+    <button>Add to Cart</button>
+    <button>Add to WishList</button>
+    </div>
+    </div>
+    </div>
     </>
   )
 }

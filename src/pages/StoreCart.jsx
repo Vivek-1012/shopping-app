@@ -101,22 +101,23 @@ return (
     <ol className='itemDisplay'>{setStore?.map(({id,title,_id,actualPrice,author,image,price,discount,categoryName,rating,cart,wishList})=>
     <li className='itemDisplayCard' key={id}>
       
-      <div><img src={image} alt={title} width={150} height={200} /></div>
+      <div><img src={image} alt={title} width={150} height={200} />
+      <button onClick={()=>wishlistHandler(_id)}>{wishList?"Remove from wishlist":"Add to WishList"}</button> </div>
       <div className='titleAndRating'>
-      <p className='displayCardTitle' ><Link style={{textDecoration:"none"}}  to={`/ProductDetails/${_id}`}>{title}</Link></p>
+      <p className='displayCardTitle' ><Link style={{textDecoration:"none",color:"gold",fontSize:"18px"}}  to={`/ProductDetails/${_id}`}>{title}</Link></p>
       <p className='displayCardRating'> {rating}★</p>
       </div>
       <p className='displayCardAuthor' >{author}</p>
       <div className='accountDetails' >      
       <p className='displayCardPrice'> ₹{price} </p>
-      <p className='displayCardActualPrice'> ₹{actualPrice} </p>
-      <p className='displayCardDiscount'> {discount} </p>
-      </div>
-      
+      <p className='displayCardActualPrice'style= {{color:'grey'}}> ₹{actualPrice} </p>
+      <p className='displayCardCrossPrice'> | </p>
+      <p className='displayCardDiscount' style= {{color:'lightblue'}} > ({discount} OFF) </p>
+      </div>    
       
 
-      <div>{cart?<button className='cartButton'><Link to="/Cart" style={{cursor:"pointer", textDecoration:"none",fontWeight:"bold"}} >Go to Cart</Link></button>:<button className='cartButton'> <span onClick={()=>cartHandler(_id)} style={{cursor:"pointer"}} > Add to cart </span></button>}</div>
-      <button onClick={()=>wishlistHandler(_id)}>{wishList?"Remove from wishlist":"Add to WishList"}</button>          
+      <div className='cartButtonDiv' >{cart?<button className='cartButton'><Link to="/Cart" style={{cursor:"pointer",color:"white" ,textDecoration:"none",fontWeight:"bold"}} >Go to Cart</Link></button>:<button className='cartButton'> <span onClick={()=>cartHandler(_id)} style={{cursor:"pointer"}} > Add to cart </span></button>}</div>
+               
     </li>)}</ol></div>
     </div>
     </div>

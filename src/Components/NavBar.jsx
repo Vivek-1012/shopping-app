@@ -7,7 +7,7 @@ const {selectCartItem,selectWishListItem} = useProductContext();
   return (
     <div className='navitem'>
       <div className='Home'>
-      <NavLink className='navHeading' to="/"> Home </NavLink>
+      <NavLink className='navHeading' to="/"> Pustakभंडार </NavLink>
       </div >
       <input className='inputBar' type="text"/>
       <div id='navItem'>

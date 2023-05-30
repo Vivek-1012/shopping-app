@@ -126,7 +126,7 @@ export const products = [
   {
     _id: uuid(),
     image:`https://books.google.co.in/books/content?id=DXQ8KM-03HAC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1qALZ1aahrMR0cFdRAFeletyosqA&w=1280` ,
-    title: "You Are Born to Blossom",
+    title: "You Are Born",
     author: "A.P.J. Abdul Kalam",
     price: 700,
     actualPrice: 1000,
@@ -139,7 +139,7 @@ export const products = [
   {
     _id: uuid(),
     image:`https://m.media-amazon.com/images/I/71aHmBv498L._AC_UF1000,1000_QL80_.jpg` ,
-    title: "The Gifts of Imperfection",
+    title: "Imperfection",
     author: "Junaid Qureshi",
     price: 900,
     actualPrice: 1200,
