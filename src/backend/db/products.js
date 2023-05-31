@@ -9,7 +9,7 @@ export const products = [
   {
     _id: uuid(),
     image:`https://i.pinimg.com/originals/6b/9c/26/6b9c2669f522fef954c8bffbc3ce342b.jpg`,
-    title: "Bhagwat Geeta",
+    title: "Bhagavad Gita",
     author: "Shri Krishna",
     price: 1000,
     actualPrice: 2000,

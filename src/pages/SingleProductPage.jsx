@@ -33,10 +33,10 @@ const SingleProductPage = () => {
         <p>🏷️ Cash On Delivery Available</p>
       </div>
       <div>    
-    <p>Author : {ProductDetails.author} </p>
-    <p>category : {ProductDetails.categoryName} </p>  
-    <p>Binding : Hardcover </p>  
-    <p>Language : English </p>  
+    <p><strong>Author</strong>  :    {ProductDetails.author} </p>
+    <p><strong> category</strong>  : {ProductDetails.categoryName} </p>  
+    <p><strong> Binding</strong> :  Hardcover </p>  
+    <p><strong>  Language</strong> : English </p>  
     </div>
     <button>Add to Cart</button>
     <button>Add to WishList</button>

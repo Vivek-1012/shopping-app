@@ -16,6 +16,8 @@ const {selectCartItem,selectWishListItem} = useProductContext();
       <NavLink className='navHeading' to="/Cart"> Cart ({selectCartItem.length}) </NavLink>
       <NavLink className='navHeading' to="/Profile"> Profile </NavLink>
       <NavLink className='navHeading' to="/Mockman"> Mockman </NavLink>
+      <NavLink className='navHeading' to="/SignIn"> Login </NavLink>
+      
       
       </div>
     </div>

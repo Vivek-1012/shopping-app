@@ -246,3 +246,24 @@ padding: 1.3rem;
   padding: 1.5rem;
 }
 
+/* Sign up and in page layout */
+
+.SigninPagelayout,.signupPageLayout{
+  margin: 0;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  border-radius: 1rem;
+  ;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  width: 40vh;
+  height: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.3rem;
+}
+
+.inputPage{
+  width: 100%;
+ margin-bottom:10px; 
+}
